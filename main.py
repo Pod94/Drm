@@ -50,15 +50,15 @@ prefixes = ["/", "~", "?", "!"]
 
 plugins = dict(root="plugins")
 if __name__ == "__main__" :
-    bot = Client(
+    bot = Client()
         "StarkBot",
-        bot_token=os.environ.get("BOT_TOKEN"),
-        api_id=int(os.environ.get("API_ID")),
-        api_hash=os.environ.get("API_HASH"),
+        BOT_TOKEN = os.environ.get("BOT_TOKEN", "7550260070:AAGDjGpwvuSbGgzxcN-3z95oGAce-qqlbC8")
+        API_ID = int(os.environ.get("API_ID", "26513107"))
+        API_HASH = os.environ.get("API_HASH", "f14ce4b58dc8812cfc9665588472f2d4")
         sleep_threshold=20,
         plugins=plugins,
         workers = 50
-    )
+
     
     async def main():
         await bot.start()
