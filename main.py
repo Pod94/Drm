@@ -61,9 +61,7 @@ if __name__ == "__main__" :
 
     )
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7550260070:AAGDjGpwvuSbGgzxcN-3z95oGAce-qqlbC8")
-    API_ID = int(os.environ.get("API_ID", "26513107"))
-    API_HASH = os.environ.get("API_HASH", "f14ce4b58dc8812cfc9665588472f2d4")
+    
     async def main():
         await bot.start()
         bot_info  = await bot.get_me()
